@@ -10,8 +10,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tytuł strony -->
     <title>Moja pierwsza strona internetowa</title>  
+    <!-- opis strony widoczny np. w google -->
+    <meta name="description" content="to jest opis mojej strony">
 </head>
 <body>
-   Hello <b>world</b>.
+   <h1>To jest nagłówek h1</h1>
+   <h2>To jest nagłówek h2</h2>
+   <h3>To jest nagłówek h3</h3>
+   <h4>To jest nagłówek h4</h4>
+   <h5>To jest nagłówek h5</h5>
+   <h6>To jest nagłówek h6</h6>
+   <!-- akapit -->
+   <p> 
+       <!-- twarda spacja -->
+       Lorem &nbsp;ipsum <br> dolor sit, amet consectetur adipisicing elit. At quaerat delectus nostrum recusandae inventore iste, accusantium soluta, dicta, velit architecto dolore quasi neque sint error quisquam. Enim modi mollitia sed.
+   </p>
+   <!-- encje -->
+   2 &lt; 5
+   Za przejście do nowej lini odpowiada &lt; br &gt;
+   Encja ampersand: Mumford &amp; Sons
+   <p> 
+       <b>Lorem ipsum dolor</b> sit, <i>amet consectetur </i>
+       adipisicing elit. At quaerat delectus nostrum recusandae inventore iste, accusantium soluta, dicta, velit architecto <u>dolore quasi</u> neque sint error quisquam. <br>Enim modi mollitia sed.
+       <!-- br nowa linia -->
+       <strong>Lorem ipsum dolor sit</strong>, amet consectetur adipisicing elit. At quaerat delectus nostrum recusandae inventore iste, accusantium soluta, dicta, velit architecto dolore quasi neque sint <b>error</b> quisquam. Enim modi <em>mollitia sed.</em>
+   </p>
+   <!-- lista wyponktowana -->
+   <ul> 
+       <li> wiosna</li>
+       <li> lato</li>
+       <li> jesień</li>
+       <li> zima</li>
+   </ul>
+   <!-- lista numerowana -->
+   <ol> 
+    <li> wiosna
+        <ul>
+            <li>kwiecień</li>
+            <li>maj</li>
+            <li>czerwiec</li>
+        </ul>
+    </li>
+    <li> lato</li>
+    <li> jesień</li>
+    <li> zima</li>
+   </ol>
+  <!-- tabele 5x5 -->
+  <table border="1">   
+      <!-- tr wiersz tabeli -->
+      
+      <tr> 
+          <!-- td komórka tabeli -->
+       <td>01</td>
+       <td>02</td>
+       <td>03</td> 
+       <td>04</td>
+       <td>05</td>
+      </tr>
+
+      <tr> 
+        <td>11</td>
+        <td>12</td>
+        <td>13</td> 
+        <td>14</td>
+        <td>15</td>
+       </tr>
+
+       <tr> 
+        <td>21</td>
+        <td>22</td>
+        <td>23</td> 
+        <td>24</td>
+        <td>25</td>
+       </tr>
+
+       <tr> 
+        <td>31</td>
+        <td>32</td>
+        <td>33</td> 
+        <td>34</td>
+        <td>35</td>
+       </tr>
+
+       <tr> 
+        <td>41</td>
+        <td>42</td>
+        <td>43</td> 
+        <td>44</td>
+        <td>45</td>
+       </tr>
+  </table>
+    <br>
+  <table border="1">   
+      <tr>  
+          <!-- td*5 plus tab  td{}*5 i dać co w środku -->
+          <!-- td{komórka $}*5 dolaj wpisuje kolejne numerki -->
+          <td colspan="3">komórka 1</td>
+          <!-- <td>komórka 2</td>
+          <td>komórka 3</td> -->
+          <td>komórka 4</td>
+          <td>komórka 5</td>    
+      </tr>
+      <tr>  
+        <td>komórka 11</td>
+        <td rowspan="4">komórka 12</td>
+        <td>komórka 13</td>
+        <td>komórka 14</td>
+        <td>komórka 15</td>    
+    </tr>
+    <tr>  
+        <td>komórka 21</td>
+        <!-- <td>komórka 22</td> -->
+        <td>komórka 23</td>
+        <td>komórka 24</td>
+        <td>komórka 25</td>    
+    </tr>
+    <tr>  
+        <td>komórka 31</td>
+        <!-- <td>komórka 32</td> -->
+        <td>komórka 33</td>
+        <td>komórka 34</td>
+        <td>komórka 35</td>    
+    </tr>
+    <tr>  
+        <td>komórka 41</td>
+        <!-- <td>komórka 42</td> -->
+        <td>komórka 43</td>
+        <td>komórka 44</td>
+        <td>komórka 45</td>    
+    </tr>
+  </table>
+   <!-- table z nagłowkiem i stopką (udostępnione w materiałach)-->
+   <h2>Odnośniki</h2>
+   <a href="https://www.google.pl">Przejdź do Google</a>
+   <a href="galeria.html">Przejdź do galerii</a>
+   <!-- Odnośnik do e-mail -->
+   Napisz do mnie: <a href="mailto:julia.kubac22@gmail.com"> julia.kubac22@gmail.com</a>
+   <a href="https://www.google.pl" target="blank" >Przejdź do Google</a>
+   
 </body>
 </html>
+
