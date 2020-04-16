@@ -1,0 +1,49 @@
+body{
+    background: rgb(171, 174, 201);
+}
+main{
+    width: 1000px;
+    /* wyśrodkowanie robimy marginesy, margines auto czyli możliwy największy*/
+    margin: 0 auto;
+}
+header{
+    height: 150px;
+    background: lightblue;
+}
+nav {
+    /* flex formatowanie w jednym wymiarze */
+    display: flex;
+    /* zawijanie wierszy */
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+}
+/* każde a wewnątrz każdnego nav */
+nav a {
+    margin: 0 5px;
+}
+section{
+    /* display domyślnie block */
+    display: flex;
+    /* align-items: stretch; */
+    height: 500px;
+    /* kierunek układania elementów */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+}
+/* nie ustawiać wysokości na sztywno jeśli nie trzeba */
+aside{
+    width: 150px;
+    background: lightcoral;
+}
+article{
+    width: 700px;
+    background: lightcyan;
+}
+#right-panel{
+    width: 150px;
+    background: lightpink;
+}
+footer{
+    height: 150px;
+    background: lightseagreen;
+}

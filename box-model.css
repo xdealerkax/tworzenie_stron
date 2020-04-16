@@ -1,0 +1,42 @@
+span {
+    /* przeźroczystość */
+    color: rgba(128, 128, 128, 0.74);
+}
+/* w domyśle wszystkie divy i spany w pliku */
+div {
+    background: grey;
+}
+/* po # nazwa id */
+#block-model {
+    /* żeby przespieszyć w200 i nacisnąć tab */
+    width: 200px; 
+    height: 200px;
+    /* background: lightseagreen; */
+    /* opisywanie kolorów , kolor/wartość 16-stkowy zobaczyć w porgramach graficznych*/
+    background: #9686a5;
+
+    /* padding skrót, nie mówisz konkretny znaczy wszystkie 
+    padding dookoła*/
+    /*1. margines wewnętrzny */
+    padding: 20px; 
+    /* zróznicowanie paddingów  dwie wartosći 1- góra/dół 2- lewo/prawo*/
+    /* padding:15px, 30px; */
+    /* wszystko pokolei podać góra prawo dół lewo (wskazówki zegara) */
+    padding: 20px, 30px, 10px, 50px;
+
+    /* 2.obramowanie border */
+    /* kolejność: szerokość , styl , kolor*/
+    /* style: solid , dotted(kropkowane), dashed(kroskowane) */
+    border: 10px solid black;
+    /* obramowanie z jednej strony */
+    border-bottom: 2px solid black;
+    /* border-bottom-width: 10px; */
+
+    /* 3.margines zewnętrzny  */
+    /* kolejność jak w paddingach */
+    margin: 30px, 10px;
+    margin: 30px , 20px, 50px, 40px;
+    /* ważniejsza wartość wpisana najpóźniej */
+    margin-left: 5px;
+
+}
