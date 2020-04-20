@@ -25,7 +25,9 @@ section{
     /* display domyślnie block */
     display: flex;
     /* align-items: stretch; */
-    height: 500px;
+    /* height: 500px; */
+    /* minimalna wysokość */
+    min-height: 500px;
     /* kierunek układania elementów */
     /* flex-direction: column; */
     /* flex-direction: row-reverse; */
@@ -34,10 +36,12 @@ section{
 aside{
     width: 150px;
     background: lightcoral;
+    
 }
 article{
     width: 700px;
     background: lightcyan;
+    overflow: auto;
 }
 #right-panel{
     width: 150px;

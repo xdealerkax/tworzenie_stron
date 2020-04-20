@@ -1,0 +1,59 @@
+/*  KAŻDY SELEKTOR MOŻNA ŁĄCZYĆ Z INNYMI */
+/* np.
+ul #kontakt{
+    ....
+}
+ */
+
+/* selektor znacznika */
+div{
+    background: lightpink;
+}
+/* elementy w elementach - każdy li wewnatrz kazdego ul */
+ul li{
+    margin:10px;
+}
+section li {
+    padding: 10px;
+}
+/* znak > b jest bezpośrednio wewnątrz section */
+section > b {
+    color: yellow;
+}
+
+/* wspolne formatowanie dla section i article */
+section, article{
+    padding: 10px;
+}
+/* można również tak */
+section{
+    padding: 10px;
+
+}
+article{
+    padding: 10px;
+}
+/* formatowanie z użyciem id elementu */
+#nagłówek{
+    font-size: 20px;
+}
+/* formatowanie z użyciem klasy cas */
+/* klasa dokładniej opisuje element niż znacznik */
+.f20{
+    font-size: 24px;
+}
+.p40 {
+    padding: 40px;
+}
+/* pseudoklasa hover, elemewnt został najechany mysza wtedy zmieni się tło*/
+a:hover {
+    background: yellow;
+}
+/* pseudoklasa  wybrany element li */
+li:nth-child(2) {
+    background: blue;
+}
+/* pseudoklasa wszystkie parzyste mają zmieniony kolor tła*/
+p:nth-child(even){
+    background: lightcoral;
+}

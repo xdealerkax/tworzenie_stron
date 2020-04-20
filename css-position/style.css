@@ -1,0 +1,58 @@
+body {
+    background: grey;
+    display: flex;
+    justify-content: center;
+}
+main { 
+    background: lightblue;
+    width: 1000px;
+    height: 2000px;
+    position: relative;
+}
+/* każdy div w każdym main */
+main div {
+    width: 150px;
+    height: 150px;
+    /* domyślna position to static */
+    position: relative;
+    /*  no ile pixeli w lewo/prawo/góra/dól */
+
+}
+#a1 {
+    background: lightcyan;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+#a2 {
+    background: lightgray;
+    /* absolute a2 pozostale elementy go nie widzą */
+    position: absolute;
+    /* position */
+    /* top: 40px;
+    left: 60px; */
+    /* right: 0; */
+    /* top:0; */
+    top: 50px;
+    left: 50px;
+    z-index: 10;
+}
+#a3 { 
+    background: lightsalmon;
+    /* fixed element jak się przewija strone nie zmienia pozycji */
+    /* position: fixed; */
+    /* sticky trzyma się podanych poxeli podczas scrolowowania, urzymuje swoją pozycję gdy dojdzie do pixeli*/
+    position: sticky;
+    top: 100px;
+    /* right: 100px; */
+}
+#a4 {
+    background: lightpink;
+    /* wtedy do góry gdy na minusie */
+    /* top: -10px; 
+    left: -50px; */
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 40;
+}

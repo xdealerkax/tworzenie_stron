@@ -1,0 +1,34 @@
+body{
+    display: flex;
+    justify-content: center;
+    color: #2d3438;
+}
+a {
+    color: #2d3438;
+}
+main {
+    width: 1140px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    /* wybranie pogrubienia */
+    font-weight: bold;
+    padding: 6px 24px;
+    margin: 6px;
+    /* zaokrąglenie narożników */
+    border-radius: 2px;
+}
+nav a:hover{
+    background: #646d72;
+}
+nav a.active {
+    background: #ffc000;
+    color: #fff;
+}
+/* nie podawać h i w bo grafika straci proporcje */
+#logo {
+    width: 131px;
+}
