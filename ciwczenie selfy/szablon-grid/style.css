@@ -1,0 +1,47 @@
+body {
+    background: rgb(171, 174, 201);
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 150px 700px 150px;
+    grid-template-rows: 150px 500px 150px;
+    grid-template-areas: "header header header" "aside article rpanel" "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background: lightblue;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    margin: 0 5px;
+}
+
+aside {
+    grid-area: aside;
+    background: lightcoral;
+}
+
+article {
+    grid-area: article;
+    background: lightcyan;
+    overflow: auto;
+}
+
+#right-panel {
+    grid-area: rpanel;
+    background: lightpink;
+}
+
+footer {
+    grid-area: footer;
+    background: lightseagreen;
+}
