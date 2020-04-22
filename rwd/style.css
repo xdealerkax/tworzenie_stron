@@ -1,0 +1,96 @@
+body{
+    background: rgb(171, 174, 201);
+}
+main{
+    width: 1000px;
+    /* wyśrodkowanie robimy marginesy, margines auto czyli możliwy największy*/
+    margin: 0 auto;
+}
+header{
+    height: 150px;
+    background: lightblue;
+}
+nav {
+    /* flex formatowanie w jednym wymiarze */
+    display: flex;
+    /* zawijanie wierszy */
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+}
+/* każde a wewnątrz każdnego nav */
+nav a {
+    margin: 0 5px;
+}
+section{
+    /* display domyślnie block */
+    display: flex;
+    /* align-items: stretch; */
+    /* height: 500px; */
+    /* minimalna wysokość */
+    min-height: 500px;
+    /* kierunek układania elementów */
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+}
+/* nie ustawiać wysokości na sztywno jeśli nie trzeba */
+aside{
+    width: 150px;
+    background: lightcoral;
+    
+}
+article{
+    width: 700px;
+    background: lightcyan;
+    overflow: auto;
+}
+#right-panel{
+    width: 150px;
+    background: lightpink;
+}
+footer{
+    height: 150px;
+    background: lightseagreen;
+}
+/*  */
+@media (max-width: 1200px){
+
+}
+/* tablety stare monitory */
+@media (max-width: 1024) {
+    main {
+       
+        width: 850px;
+    }
+    #right-panel {
+        /* opacity: 0; */
+        /* visibility: hidden; */
+        display: none;
+    }
+    
+}
+/* telefony mobline  czasami zwiekszamy do 820px */
+@media (max-width: 768px) {
+    main {
+        /* szerokość w % kiedy nie zdamy dokładnych rozdzielczości urządzeń, 100 procent pojekmnika czyli body */
+        width: 100%;
+    }
+    #right-panel {
+        /* opacity: 0; */
+        /* visibility: hidden; */
+        display: none;
+    }
+   
+}
+/* urządzenia w pionie */
+@media (max-width: 500px) {
+    main {
+        /* szerokość w % kiedy nie zdamy dokładnych rozdzielczości urządzeń, 100 procent pojekmnika czyli body */
+        width: 100%;
+    }
+    #right-panel {
+        /* opacity: 0; */
+        /* visibility: hidden; */
+        display: none;
+    }
+    
+}
