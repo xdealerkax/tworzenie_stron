@@ -1,0 +1,120 @@
+body {
+    /* pierwsze dwa nie potrzebne */
+    /* background: #BE93C5;   */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);   */
+    /* wersja archaiczna  */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* 1 sposób animacji */
+/* płynie fala za kursorem */
+a.anim {
+    /* przejście 3 elementy 1:co animujemy all/width/backgroud cloro 2: czas  3:styl animacji
+    domyślnie linear*/
+    transition: all 1s linear;
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+a.anim:hover {
+    transition: all 0.15s linear;
+    background: #fff;
+    color: #000000;
+}
+.box {
+    width: 300px;
+    height: 10px;
+    border: 10px solid #fff;
+    background: rgb(216, 151, 200);
+    margin: 10px;
+    position: relative;
+    left: 0;
+    transition: all 1s ease-in-out;
+    /*  cubic bezier matematyczne wartości się wybiera */
+    /* ease in */
+    /*  animacja ease in out na początku przyspiesza potem hamuje jak winda*/
+}
+.box.b1:hover {
+    background: red;
+}
+.box.b2:hover {
+    left: 150px;
+}
+.box.b3 div {
+    transition: all 1s ease-in-out;
+    background: red;
+    position: absolute;
+    width: 0;
+    height: 100%;
+}
+.box.b3:hover div{
+    width: 100%;
+}
+.box.b4::after {
+    background: red;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    /* nie każda właściwość styli sie aminuje nie animuje się display */
+    transition: all 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    right: 0;
+}
+.box.b4:hover::after{
+    width: 100%;
+}
+/* 2 sposób animacji animacje można podzielić na klatki i każdą klatkę zdefiniować */
+.box.b5::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: red;
+}
+.box.b5:hover::before {
+    /* dzięki temu tą animację przypieliśmy do tego elementu */
+    animation-name: bar;
+    /* czas animacji */
+    animation-duration: 2s;
+    /* ile razy animacja ma się powtórzyć */
+    animation-iteration-count: 3;
+    /* po jakim czasie ma się zacząć */
+    animation-delay: 1s;
+    /* w jaki sposób przebiega animacja między klatkami które wyodrębiniliśmy */
+    animation-timing-function: linear;
+    /*decyduje czy animacja się zacznie od nowa  */
+    /* animation-direction: alternate; */
+
+}
+/* bar zdefiniowana animacja */
+@keyframes bar {
+    /* from początek ,to- koniec */
+    /* from {}
+    to {} */
+    /* początek animacji, jedna klatka */
+    0% {
+        left: 0;
+        width: 0;
+    }
+    25% {
+        left: 25%;
+        width: 30%;
+    }
+    50% {
+        left: 50%;
+        width: 15%;
+    }
+    75% {
+        left: 75%;
+        width: 5%;
+    }
+    /* koniec animacji */
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}

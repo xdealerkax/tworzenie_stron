@@ -95,6 +95,11 @@ h2.home {
     color: #e2e2e2;
     font-size: 28px;
 }
+h4 {
+    color: #2d3438;
+    font-size: 36px;
+    font-family: "Roboto Condensed";
+}
 .aleo {
     font-size: 24px;
     font-weight: 400;
@@ -126,7 +131,7 @@ h2.home {
     font-size: 36px;
 }
       /* pseudo elementy before i after   */
-.info h3::after, h1::after {
+.info h3::after, h1::after, h4::after {
     content: "";
     /* element zachowuje się jak blokowy ale pozycjonowany w tekscie (inline) */
     display: inline-block;
@@ -186,4 +191,37 @@ img#about {
 }
 .about-txt div {
     width: 45%;
+}
+/* podstrona gallery */
+#gallery-one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "text img1 img2 "
+    "text img3 img4 "
+    "text img5 img6 "; 
+
+}
+/* grafika po najechaniu robi się jaśniejsza */
+section img {
+    transition: all 0.3s ease-in-out;
+}
+section img:hover {
+    opacity: 0.6;
+}
+#gallery-one img {
+    width: 350px;
+    border: 6px solid white;
+    margin: 16px 44px 16px;
+}
+#gallery-one .text {
+    grid-area: text;
+}
+#gallery-one img:nth-last-child(odd) {
+    margin-right: 0;
+}
+#gallery-one .aleo {
+    font-size: 24px;
+    line-height: 32px;
 }
