@@ -231,9 +231,10 @@ section img:hover {
     border: 6px solid white;
     margin: 16px 0;
 }
-#mock4 #gallery-two {
+#gallery-two #mock4 {
     width: 650px;
     height: 375px;
+    grid-area: img1;
 }
 #gallery-two .text2 {
     grid-area: text2;
@@ -241,7 +242,7 @@ section img:hover {
 #gallery-two {
     border-bottom: 1px solid #cad2d7;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr;
     grid-template-areas: 
     "text2 img1 img1"
