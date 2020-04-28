@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularze</title>
     <link rel="stylesheet" href="style.css">
+    <!-- biblioteka z czego biorą fonty -->
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </head>
+
 <body>
-    
+    <i class="fas fa-virus"></i>
+    <i class="fas fa-grin-alt"></i>
+    <!-- action gdzie wysyłamy dane formularza -->
+    <!-- domyślna metoda get- dokelja wszystkie nasze dane do adresu np onet.pl+dane użytkownika,widoczne hasło i inne dane 
+    metoda post do logować dane zaszyfrowane i wysłane
+     musi być enctype jęsli wysyłamy  plik-->
+    <!--  enctype="multipart/form-data"> -->
+    <form action="" method="POST" enctype="multipart/form-data">
+        <!-- label etykieta
+        jednolinijkowe pole tekstowe -->
+        <label for="imie">Imię</label>
+        <input type="text" name="imie" id="imie">
+        <label for="nazwisko">Nazwisko</label>
+        <input type="text" name="nazwisko" id="nazwisko">
+        <label for="nazwisko">Adres</label>
+        <textarea name="adres" id="" cols="30" rows="10"></textarea>
+        <label for="dostawa"></label>
+        <select name="dostawa" id="dostawa" size=3 multiple>
+            <option value="kurier">Kurier</option>
+            <option value="paczkomat">Paczkomat</option>
+            <option value="osobisty">Odbiór osobisty</option>
+        </select>
+        <div class="fr">
+            <label for="regulamin">Zaakceptuj regulamin</label>
+            <input type="checkbox" name="regulamin" id="regulamin">
+        </div>
+        <label for="email">Login</label>
+        <input type="email" name="email" id="email" required>
+        <label for="pass">Hasło</label>
+        <!-- required wymagane pole -->
+        <input type="password" name="pass" id="pass" required>
+        <p>Płeć</p>
+        <div class="fr">
+            <label for="kobieta">Kobieta</label>
+            <input type="radio" name="plec" id="kobieta">
+        </div>
+        <div class="fr">
+            <label for="mezczyzna">Mężczyzna</label>
+            <input type="radio" name="plec" id="mezczyzna">
+        </div>
+        <label for="zdjecie">Zdjęcie</label>
+        <input type="file" name="zdjecie" id="zdjecie">
+        <input type="hidden" name="medium" value="homepage">
+
+
+
+
+
+        <input type="submit" value="Zamów">
+        <input type="reset" value="Wyczyść">
+    </form>
 </body>
+
 </html>

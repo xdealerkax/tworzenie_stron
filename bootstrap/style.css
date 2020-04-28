@@ -1,0 +1,7 @@
+body {
+    background: rgb(148, 183, 197) !important; 
+}
+div {
+    background: white;
+    border: 1px solid #ccc;
+}
