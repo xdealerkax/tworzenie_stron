@@ -225,3 +225,40 @@ section img:hover {
     font-size: 24px;
     line-height: 32px;
 }
+#gallery-two img {
+    width: 300px;
+    border: 6px solid white;
+    margin: 16px 0;
+}
+#mock4 #gallery-two {
+    width: 650px;
+    height: 375px;
+}
+#gallery-two .text2 {
+    grid-area: text2;
+}
+#gallery-two {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "text2 img1 img1"
+    "text2 img2 img3";
+}
+#gallery-three img {
+    width: 650px;
+    height: 375px;
+    border: 6px solid white;
+    margin: 16px 0;
+}
+#gallery-three .text3 {
+    grid-area: text3;
+}
+#gallery-three {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "text3 img1 "
+    "text3 img2 ";
+}
