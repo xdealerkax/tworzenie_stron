@@ -194,6 +194,7 @@ img#about {
 }
 /* podstrona gallery */
 #gallery-one {
+    border-bottom: 1px solid #cad2d7;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -238,6 +239,7 @@ section img:hover {
     grid-area: text2;
 }
 #gallery-two {
+    border-bottom: 1px solid #cad2d7;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 2fr 1fr;
@@ -246,7 +248,7 @@ section img:hover {
     "text2 img2 img3";
 }
 #gallery-three img {
-    width: 650px;
+    width: 640px;
     height: 375px;
     border: 6px solid white;
     margin: 16px 0;
