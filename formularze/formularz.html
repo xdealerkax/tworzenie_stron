@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Obsługa formularzy</title>
+<meta name="description" content="Formularz rejestracji na szkolenie">
+<style>
+body {
+	background: #444;
+	font-size: 16px;
+	color: #efefef;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif
+}
+h2 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+a {
+	color: #fff;
+}
+ul {
+	list-style: none;
+}
+li {
+	margin: 5px 0 15px 0;
+	padding: 10px;
+	background: #666;
+	display: block;
+	width: 700px;
+	border-bottom: 1px solid #888
+}
+:required {
+	border-color: #f99;
+}
+label {
+	display: block;
+	float: left;
+	width: 350px;
+}
+label.short {
+	float: none;
+	display: inline;
+
+}
+fieldset {
+	width: 320px;
+}
+</style>
+</head>
+<body>
+	<h2>Formularze</h2>
+	<ul>
+		<li>Źródła:<br>
+		<a href="https://www.html5rocks.com/en/tutorials/forms/html5forms/">https://www.html5rocks.com/en/tutorials/forms/html5forms/</a><br>
+		<a href="https://www.wufoo.com/html5/">https://www.wufoo.com/html5/</a><br>
+		<a href="https://developers.google.com/web/fundamentals/design-and-ux/input/forms/">developers.google.com</a></li>
+		<li>Wysyłka formularzy - metody GET i POST</li>
+		<li>Walidacja - w przeglądarce i na serwerze!</li>
+	</ul>
+	<h2>Ex</h2>
+	<form method="post" action="#">
+	<ul>
+		<li>
+			<label for="imie">Imię (autofocus):</label>
+			<input type="text" name="imie" id="imie" autofocus>
+		</li>
+		<li>
+			<label for="nazwisko">Nazwisko (required):</label>
+			<input type="text" name="nazwisko" id="nazwisko" required>
+		</li>
+		<li>
+			<label for="haslo">Hasło (required):</label>
+			<input type="text" name="haslo" id="haslo" required>
+		</li>
+		<li>
+			<label for="plec">Płeć (required):</label>
+			<label for="pleck" class="short">Kobieta</label><input type="radio" name="plec" id="pleck">
+			<label for="plecm" class="short">Mężczyzna</label><input type="radio" name="plec" id="plecm" required>
+		</li>
+		<li>
+			<label for="regulamin">Akceptacja regulaminu</label>
+			<input type="checkbox" name="regulamin" id="regulamin">
+		</li>
+		<li>
+			<label for="adres">Adres - ulica (autocomplete):</label>
+			<!-- także: autocomplete="off" -->
+			<input type="text" name="adres" id="adres" autocomplete="address-line1">
+		</li>
+		<li>
+			<label for="adres">Adres - kod pocztowy (pattern):</label>
+			<!-- pattern: 11-111 lub 11111 -->
+			<input type="text" name="adres" id="adres" autocomplete="postal-code" pattern="^\d{2}[-]?\d{3}$"> 
+		</li>
+		<li>
+			<label for="credit-card-number">Karta kredytowa (https fail):</label>
+			<input type="text" name="credit-card-number" id="credit-card-number" autocomplete="cc-number">
+		</li>
+
+  <li>
+	<label for="studia">Miejsce studiów:</label>
+  	<select name="studia" id="studia">
+		  <option value="-">Wybierz miejsce</option>
+		  <option value="krk">Kraków</option>
+		  <option value="wawa">Warszawa</option>
+		  <option value="wroc">Wrocław</option>
+		  <option value="rze">Rzeszów</option>
+	  </select>
+  </li>
+  <li>
+	<label for="email">E-mail (placeholder):</label>
+  	<input type="email" id="email" name="email" placeholder="jan@kowalski.pl" autofocus>
+  </li>
+  <li>
+	<label for="urls">Url (datalist):</label>
+  	<input type="url" name="urls" id="urls" list="url_list">  
+    <datalist id="url_list">  
+        <option value="http://www.google.com" label="Google">  
+        <option value="http://www.onet.pl" label="Onet">
+        <option value="http://www.wp.pl" label="Wp">
+        <option value="http://www.gazeta.pl" label="Gazeta">  
+    </datalist>
+  </li>
+  <li>
+	  <!-- uwaga na różne przeglądarki -->
+	<label for="suwak">Suwak (min, max, step):</label>
+  	1 <input type="range" id="suwak" name="email" min="1" max="10"> 10
+  </li>
+  <li>
+	<label for="data">Data:</label>
+  	<input type="date" id="data" name="data">
+  </li>
+  <li>
+	<label for="number">Liczba:</label>
+  	<input type="number" id="number" name="number" min="5" max="100">
+  </li>
+  <li>
+	<label for="kolor">Kolor:</label>
+  	<input type="color" id="kolor" name="kolor">
+  </li>
+  <li>
+	<label for="uwagi">Uwagi:</label>
+  	<span id="uwagi" contenteditable>Kliknij tu by wpisać uwagi</span>
+  </li>
+
+ <li>
+	<input type="submit" id="dodaj" value="Wyślij"><br>
+	<input type="hidden" name="source" value="popup">
+  </li>
+</ul>
+<h2>Dodatkowo</h2>
+	<ul>
+		<li>atrybut form novalidate</li>
+		<li>pseudoklasy :valid/:invalid, :required/:optional, :in-range/:out-of-range, :not() dla elementów</li>
+	</ul>
+</form>
+</body>
+</html>
