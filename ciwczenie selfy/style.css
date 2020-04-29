@@ -264,3 +264,35 @@ section img:hover {
     "text3 img1 "
     "text3 img2 ";
 }
+/* klasa stworzona dla javascript */
+.bigger {
+   font-size: 60px;
+}
+/* klasa stworzona dla javascript */
+.animate {
+    transition: all 2s ease-in-out;
+    transform: translateX(-100px);
+}
+#lightbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* body się scroluje zdjęcie zostaje */
+    position: fixed;
+    /* position: absolute; */
+    z-index: 1000;
+    /* przeźroczystość za pomocą rgb */
+    background: rgba(1, 0, 0, 0.541);
+    transition: all 1s ease-in-out;
+    /* jest ukryte domyślnie */
+    display: none;
+}
+#lightbox img {
+    /* wygenerowane ze strony */
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    /* zdjęcie na 80 % ektanu */
+    max-width: 80%;
+    max-height: 80%;
+}

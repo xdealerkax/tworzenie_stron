@@ -1,0 +1,20 @@
+body {
+    background: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slider {
+    width: 800px;
+    height: 500px;
+    border: 5px solid #ffffff;
+    /* elementy które się nie mieszczą nie pokazuj ich */
+    overflow: hidden;
+}
+#slider div {
+    display: flex;
+    height: 100%;
+}
+#slider img {
+    height: 100%;
+}
